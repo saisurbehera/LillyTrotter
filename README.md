@@ -1,4 +1,4 @@
-# Jacanidae
+# Lilly Trotters
 
 ## Project description
 
@@ -70,6 +70,9 @@ Randomized Parameters:
 
 ## Exploitable environment parts
 
+Use params from [here](https://github.com/Lux-AI-Challenge/Lux-Design-S3/blob/main/src/luxai_s3/params.py)
+Use env.py from [here](https://github.com/Lux-AI-Challenge/Lux-Design-S3/blob/main/src/luxai_s3/env.py)
+
 **Energy Void Field Mechanics:**
 
 * Units create void fields in adjacent tiles
@@ -81,7 +84,47 @@ Randomized Parameters:
 * We can predict and position units accordingly
 * Use this to plan resource collection routes
 
+**Spawn Behavior:**
+- Units spawn at fixed intervals
+- Can time aggressive moves with spawn cycles
+- Exploit spawn positions (corners)
 
+**Collision Resolution**
+- Units survive if they have more total energy
+- Can stack units for stronger positions
+- Energy management crucial for survival
+
+**Sap Actions**
+- Sap affects both target tile and adjacents
+- Can maximize damage with proper positioning
+- Adjacent tiles receive reduced damage
+
+**Unit Energy Clipping**
+* Energy has max/min bounds
+* Can force enemy units into negative energy states
+* Stack energy gains efficiently
+
+**Scoring Mechanisms**
+- Only needs one unit per relic for points
+- Can spread units thin for maximum coverage
+- Don't need to defend relics with multiple units
+
+**Spawn capping**
+- Units spawn in corners
+- Can camp enemy spawn points
+- Time attacks with enemy spawns
+
+**Vision**
+* Vision is additive from multiple units
+* Can create vision walls
+* Nebulas reduce vision
+
+**All others**
+* Nebula movement is deterministic - can setup pincer movements
+* Energy calculations happen before collision resolution
+* Unit stacking affects void field distribution
+* Vision power is cumulative from multiple units
+* Relic scoring only checks for presence, not duration
 
 ### Why the name ?
 
