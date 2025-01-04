@@ -1,5 +1,7 @@
 # ReBeL
 
+# COPIED FROM https://github.com/facebookresearch/rebel
+
 Implementation of [ReBeL](https://arxiv.org/abs/2007.13544), an algorithm that generalizes the paradigm of self-play reinforcement learning and search to imperfect-information games.
 This repository contains implementation only for [Liar's Dice](https://en.wikipedia.org/wiki/Liar%27s_dice) game.
 
