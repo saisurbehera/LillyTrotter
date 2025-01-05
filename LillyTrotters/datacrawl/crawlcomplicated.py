@@ -31,7 +31,7 @@ def save_response(number: int, data: dict, base_folder: str = "crawled_data") ->
     print(f"Saved data to {file_path}")
 
 class Crawler:
-    def __init__(self, base_url: str, base_folder: str = "crawled_data", delay: float = 0.5):
+    def __init__(self, base_url: str, base_folder: str = "crawled_data", delay: float = 0.1):
         self.base_url = base_url
         self.base_folder = base_folder
         self.delay = delay
@@ -76,7 +76,7 @@ class Crawler:
         finally:
             time.sleep(self.delay)
 
-    def thoroughly_search_around(self, match_number: int, radius: int = 10):
+    def thoroughly_search_around(self, match_number: int, radius: int = 20):
         """
         When a match is found, thoroughly search all numbers around it.
         Stops in either direction when finding a non-lux match.
@@ -174,7 +174,7 @@ def main():
     crawler = Crawler(
         base_url=BASE_URL,
         base_folder=BASE_FOLDER,
-        delay=0.5
+        delay=0.1
     )
 
     successful_ids = crawler.crawl(START_NUMBER)

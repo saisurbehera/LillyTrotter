@@ -4,7 +4,7 @@
 
 Abstract:
 
-We present a neural network architecture for learning state representations and decision-making in Lux AI Season 3, a multi-agent resource management game. Our approach adapts OpenAI Five's architecture by combining a spatial-temporal encoder with an action selection mechanism specifically designed for partially observable, multi-unit control scenarios. The architecture consists of three key components: 
+We present a neural network architecture for learning state representations and decision-making in Lux AI Season 3, a multi-agent resource management game. Our approach adapts OpenAI Five's architecture by combining a spatial-temporal encoder with an action selection mechanism specifically designed for partially observable, multi-unit control scenarios. The architecture consists of three key components:
 * CNN-based spatial encoder that processes the 24x24 game board and unit states
 * LSTM(?) network
 * Hierarchical action network
@@ -16,11 +16,11 @@ The architecture's modular design allows for independent optimization of state r
 
 ## [Game explained](https://github.com/Lux-AI-Challenge/Lux-Design-S3/blob/main/docs/specs.md)
 
-Lux AI Season 3 is a competitive multi-agent resource management game played on a 24x24 grid-based map where two players compete to accumulate the most resources within 100 timesteps. The game environment features multiple terrain types including empty spaces, asteroids containing mineable resources, nebulas that affect movement costs, and energy cells that provide power. 
+Lux AI Season 3 is a competitive multi-agent resource management game played on a 24x24 grid-based map where two players compete to accumulate the most resources within 100 timesteps. The game environment features multiple terrain types including empty spaces, asteroids containing mineable resources, nebulas that affect movement costs, and energy cells that provide power.
 
-Each player controls up to four units simultaneously, with units capable of moving in five directions (center, up, right, down, left) and performing resource collection actions through a 'sap' mechanism with a maximum range of 7 tiles. Units maintain individual energy levels which are depleted by movement and sap actions, introducing a critical resource management component. 
+Each player controls up to four units simultaneously, with units capable of moving in five directions (center, up, right, down, left) and performing resource collection actions through a 'sap' mechanism with a maximum range of 7 tiles. Units maintain individual energy levels which are depleted by movement and sap actions, introducing a critical resource management component.
 
-The game implements partial observability through a fog-of-war system, requiring players to strategically explore and maintain visibility of key resource locations. 
+The game implements partial observability through a fog-of-war system, requiring players to strategically explore and maintain visibility of key resource locations.
 
 Victory is achieved by either accumulating more resources than the opponent or by eliminating enemy units through tactical energy management. The game's complexity arises from the need to balance multiple objectives: efficient resource collection, strategic positioning, energy conservation, and opponent counterplay, all while operating under imperfect information conditions. Map generation includes procedurally generated terrain layouts, ensuring each match presents unique strategic challenges and preventing memorized strategies from dominating gameplay. This is very similar to League.
 
@@ -77,7 +77,7 @@ Use env.py from [here](https://github.com/Lux-AI-Challenge/Lux-Design-S3/blob/ma
 
 * Units create void fields in adjacent tiles
 * We can position units to maximize void field damage to enemies
-* Stack units strategically to increase void field strength - This might not be too good 
+* Stack units strategically to increase void field strength - This might not be too good
 
 **Predictable Movement Patterns:**
 * Nebulas move northeast consistently
@@ -125,6 +125,11 @@ Use env.py from [here](https://github.com/Lux-AI-Challenge/Lux-Design-S3/blob/ma
 * Unit stacking affects void field distribution
 * Vision power is cumulative from multiple units
 * Relic scoring only checks for presence, not duration
+
+
+## V0 Architecture
+
+This is getting too long, so i am linking the page here.
 
 ### Why the name ?
 
