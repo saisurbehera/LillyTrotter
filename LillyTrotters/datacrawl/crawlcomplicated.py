@@ -168,7 +168,7 @@ def create_index_file(successful_ids: List[int], base_folder: str = "crawled_dat
 
 def main():
     BASE_URL = "https://www.kaggleusercontent.com/episodes/{}.json"
-    START_NUMBER = 61294546
+    START_NUMBER = 60053238
     BASE_FOLDER = "crawled_data"
 
     crawler = Crawler(

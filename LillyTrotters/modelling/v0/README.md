@@ -38,7 +38,7 @@ Let us set the following rewards and tune them later. The relative order is goin
 * Relic Points in a game
 * Total Energy
 * Unit killed
-* Percent of relic times found
+* Percent of relic tiles found
 * Percent of area explored
 
 Match Won = 5 points
@@ -52,12 +52,18 @@ This is a team game so as they say:
 
 > Needs of the many outweigh the needs of the few - Spock
 
-Let us say variable $\mu$ represent how much a team shares the reward with others. We can define the rewards as:
-$$$$
+Let us say variable $\mu$ represent how much a team shares the reward with others.
+
+We can define the rewards as:
+$$ \mu  $$
 
 I am just a chill guy, i will not have enemies data in my reward function. Yes, v1 will be different.
 
 ![I am chill guy](https://i1.sndcdn.com/artworks-9nBKzBuDB1qvt2pp-tfzeGw-t500x500.png)
+
+*Long term credit assignment*
+
+
 
 ## V1 things
 

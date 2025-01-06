@@ -7,9 +7,9 @@ class ActionNetwork(nn.Module):
         super(ActionNetwork, self).__init__()
 
         # Dimensions
-        self.action_dim = 3  # 3 possible actions
-        self.unit_dim = 16   # 16x1 for target unit
-        self.coordinate_dim = 1  # 1D output for each coordinate
+        self.action_dim = 2  # 3 possible actions: Move, Stay, Zap
+        self.unit_dim = 16   # 16x1 for target units
+        self.coordinate_dim = 2  # 1D output for each coordinate
 
         # LSTM for processing state
         self.lstm = nn.LSTM(input_size=embedding_dim,
