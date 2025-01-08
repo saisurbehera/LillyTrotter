@@ -65,6 +65,7 @@ I am just a chill guy, i will not have enemies data in my reward function. Yes, 
 
 
 
+
 ## V1 things
 
 * Add embedding layer in UnitSetProcessor to create specialization and difference. Think of scouting bots which explore and the main force goes to attack.

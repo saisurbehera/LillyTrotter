@@ -1,5 +1,20 @@
 # Lilly Trotters
 
+## Project update:
+- [x] Scraping script completed
+  - [x] Over 3000 episodes scraped total ~200GB data.
+  - [x] Script designed to run automatically with error handling and lux-ai filtering
+  - [] Async calls with semaphore routing
+  - [] Proxy to stop from detecting
+- [x] Dataprocessing script
+  - [x] Script to parse json and covert to tensor values
+  - [] HF datasets code to convert the data in x,y pairs
+- [] V_0 changes
+  - [ ] Behavioral Cloning Training pipeline
+  - [x] Observation Network
+  - [x] Action network
+  - [ ] Reward function (discussed but not implement)
+
 ## Project description
 
 Abstract:
