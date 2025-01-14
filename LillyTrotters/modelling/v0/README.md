@@ -63,7 +63,9 @@ I am just a chill guy, i will not have enemies data in my reward function. Yes, 
 
 *Long term credit assignment*
 
+## Action space:
 
+For each unit's action, the first integer indicates the type of action, which can be 0 for doing nothing, 1 to move up, 2 to move right, 3 to move down, 4 to move left, and 5 to sap a tile. The next 2 integers are only for the sap action and indicate the location of the tile to sap from relative to the unit's position (a delta x and y value).
 
 
 ## V1 things
