@@ -25,6 +25,8 @@ class UnitProcessor(nn.Module):
         self.fc2 = nn.Linear(64, 128)
         
     def forward(self, positions, energy, mask):
+        # Reshape it to add it in  the last deminsion
+        energy = energy.unsqueeze(-1) 
         # Combine position and energy
         features = torch.cat([positions, energy], dim=-1)  # Shape: (batch, teams, units, 3)
         
@@ -118,3 +120,4 @@ class GameStateProcessor:
             'relic_nodes': torch.FloatTensor(obs['obs']['relic_nodes']),
             'relic_nodes_mask': torch.FloatTensor(obs['obs']['relic_nodes_mask'])
         }
+        
